@@ -10,11 +10,11 @@ import (
 )
 
 func main() {
-	// botToken := "7484235929:AAHiFUWLo2nmqXyMe9gby7yc0SBUb8ZysE4"
+	botToken := "7484235929:AAHiFUWLo2nmqXyMe9gby7yc0SBUb8ZysE4"
 	var wg sync.WaitGroup
 	// Add two tasks to the WaitGroup
 	wg.Add(1)
-	// go runJokerBot(botToken, &wg)
+	go runJokerBot(botToken, &wg)
 	go startHTTPServer()
 	// Wait for goroutines to complete
 	wg.Wait()
