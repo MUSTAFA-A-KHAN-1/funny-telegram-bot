@@ -35,6 +35,7 @@ func runJokerBot(botToken string, wg *sync.WaitGroup) {
 
 // startHTTPServer starts a simple HTTP server for health checks
 func startHTTPServer() {
+	fmt.Print("Hello from server")
 	http.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Bot is running! Alo ha!")
 	})
